@@ -1,7 +1,7 @@
 {
   "name": "boo-boo",
-  "version": "0.1.0",
-  "description": "error",
+  "version": "1.0.0-alpha.1",
+  "description": "Opinionated enhanced errors for Node and browsers.",
   "main": "./src/index.js",
   "module": "./src/index.js",
   "jsnext:main": "./src/index.js",

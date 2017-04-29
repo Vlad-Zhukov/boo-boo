@@ -5,7 +5,7 @@ boo-boo
 ## API
 
 ### `new boo.Internal([messageOrError]),`<br>`new boo.Request([messageOrError]),`<br>`new boo.Timeout([messageOrError]),`<br>`new boo.Validation([messageOrError])`
-A [`Boo`](#Boo) constructor, inherited from [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). 
+A [`Boo`](#boo) constructor, inherited from [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). 
 All variants create an instance of Boo with a different `name` property. See [`names`](#names) for all available names. 
 
 __Arguments__
@@ -28,7 +28,7 @@ __Properties__
 - `name` _(String)_: Error name. See [`names`](#names) for all available names. 
 - `message` _(String)_: Optional. Human-readable description of the error.
 - `stack` _(String)_: Stack trace.
-- `isBoo` _(Boolean)_: A readonly property to simplify error instances checking of [`Boo`](#Boo) 
+- `isBoo` _(Boolean)_: A readonly property to simplify error instances checking of [`Boo`](#boo) 
 (i.e. `err instanceof boo.Internal`). Always returns `true`;
 
 __Methods__
@@ -41,7 +41,7 @@ The resulting object contains `name`, `message` and `stack` properties (if exist
 ---
 
 ### `names`
-A plain object of names used by [`Boo`](#Boo) constructors: `Internal`, `Request`, `Timeout` and `Validation`. 
+A plain object of names used by [`Boo`](#boo) constructors: `Internal`, `Request`, `Timeout` and `Validation`. 
 The list can be supplemented, PRs are welcome.
 
 __Examples__
