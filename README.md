@@ -1,10 +1,10 @@
-boo-boo
+boo-boo · [![npm](https://badge.fury.io/js/boo-boo.svg)](https://www.npmjs.com/package/boo-boo)
 =======
 > Opinionated better errors for Node.js, browsers and React Native.
 
 ## API
 
-### `new boo.Internal([messageOrError]),`<br>`new boo.Request([messageOrError]),`<br>`new boo.Timeout([messageOrError]),`<br>`new boo.Validation([messageOrError])`
+### `new boo.Internal([messageOrError])`<br>`new boo.Request([messageOrError])`<br>`new boo.Timeout([messageOrError])`<br>`new boo.Validation([messageOrError])`
 A [`Boo`](#boo) constructor, inherited from [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). 
 Each variant creates an instance of Boo with a specific `name` property. See [`names`](#names) for all available names. 
 
