@@ -4,9 +4,7 @@ const pkg = require('./package.json');
 
 export default {
     entry: 'src/index.js',
-    plugins: [
-        babel(babelrc()),
-    ],
+    plugins: [babel(babelrc())],
     external: Object.keys(pkg.dependencies),
     targets: [
         {
