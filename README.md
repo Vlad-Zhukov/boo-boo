@@ -1,6 +1,6 @@
 boo-boo
 =======
-> Opinionated enhanced errors for Node and browsers.
+> Opinionated better errors for Node.js, browsers and React Native.
 
 ## API
 
