@@ -1,6 +1,6 @@
 {
   "name": "boo-boo",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Opinionated better errors for Node.js, browsers and React Native.",
   "main": "./dist/index.js",
   "module": "./src/index.js",

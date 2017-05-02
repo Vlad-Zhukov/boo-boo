@@ -24,14 +24,16 @@ console.log(err.message); // 'boo!'
 ---
 
 ### `Boo`
-An instance of `Boo` created by one of constructors above.
+An instance of `Boo` created by [one of constructors](#new-boointernalmessageorerrornew-boorequestmessageorerrornew-bootimeoutmessageorerrornew-boovalidationmessageorerror)
+above.
 
 __Properties__
-- `name` _(String)_: Error name. See [`names`](#names) for all available names. 
+- `name` _(String)_: Error name that is set upon creation. See [`names`](#names) for all available names. 
 - `message` _(String)_: Optional. Human-readable description of the error.
 - `stack` _(String)_: Stack trace.
-- `isBoo` _(Boolean)_: A readonly property to simplify error instance checking of [`Boo`](#boo).
-It replaces a somewhat ugly and counter-intuitive `err instanceof boo.Internal` with `err.isBoo`. Always returns `true`.
+- `isBoo` _(Boolean)_: A readonly property that always returns `true` to simplify error instance checking of 
+[`Boo`](#boo). It's intended to replace a somewhat ugly and counter-intuitive `err instanceof boo.Internal` with a much 
+more slick `err.isBoo`.
 
 __Methods__
 - `toString()` → _String_: Overrides the default [`Error.prototype.toString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString) 
