@@ -5,17 +5,19 @@
 function createBoo(name) {
     return class Boo extends Error {
         /**
-         * @param messageOrError {any|Error}
+         * @param messageOrError {*|Error}
          */
         constructor(messageOrError) {
             let message;
-            if (messageOrError instanceof Error) {
-                message = messageOrError.message;
-                // TODO: inherit stack
-            }
             // Ignore undefined and null
-            else if (messageOrError != null) {
-                message = String(messageOrError);
+            if (messageOrError != null) {
+                if (messageOrError instanceof Error) {
+                    message = messageOrError.message;
+                    // TODO: inherit stack
+                }
+                else {
+                    message = String(messageOrError);
+                }
             }
 
             super(name + message ? `: ${message}` : '');
