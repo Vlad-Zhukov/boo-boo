@@ -2,9 +2,6 @@
   "name": "boo-boo",
   "version": "1.0.0-alpha.2",
   "description": "Opinionated better errors for Node.js, browsers and React Native.",
-  "main": "./dist/index.js",
-  "module": "./src/index.js",
-  "jsnext:main": "./src/index.js",
   "author": "Vlad Zhukov (http://github.com/Vlad-Zhukov)",
   "license": "MIT",
   "repository": {
@@ -14,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/Vlad-Zhukov/boo-boo/issues"
   },
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
+  "jsnext:main": "./src/index.js",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
@@ -35,16 +35,16 @@
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1"
   },
-  "jest": {
-    "roots": [
-      "<rootDir>/__tests__/"
-    ]
+  "engines": {
+    "node": ">=6"
   },
   "files": [
     "src",
     "dist"
   ],
-  "engines": {
-    "node": ">=6"
+  "jest": {
+    "roots": [
+      "<rootDir>/__tests__/"
+    ]
   }
 }
