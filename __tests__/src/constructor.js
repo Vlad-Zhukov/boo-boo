@@ -1,18 +1,18 @@
 import boo from '../../src/index';
 
-const __NUMBER__ = 12345;
-const __STRING__ = 'boo!';
-const __OBJECT__ = {};
-const __UNDEFINED__ = undefined;
-const __SYMBOL__ = Symbol(__STRING__);
+const NUMBER__ = 12345;
+const STRING__ = 'boo!';
+const OBJECT__ = {};
+const UNDEFINED__ = undefined;
+const SYMBOL__ = Symbol(STRING__);
 
 describe('Should construct', () => {
-    const err = new TypeError(__STRING__);
+    const err = new TypeError(STRING__);
 
     test('Internal', (done) => {
-        expect(new boo.Internal(__STRING__)).toBeInstanceOf(Error);
-        expect(new boo.Internal(__NUMBER__)).toBeInstanceOf(Error);
-        expect(new boo.Internal(__SYMBOL__)).toBeInstanceOf(Error);
+        expect(new boo.Internal(STRING__)).toBeInstanceOf(Error);
+        expect(new boo.Internal(NUMBER__)).toBeInstanceOf(Error);
+        expect(new boo.Internal(SYMBOL__)).toBeInstanceOf(Error);
         expect(new boo.Internal(null)).toBeInstanceOf(Error);
         expect(new boo.Internal()).toBeInstanceOf(Error);
         expect(new boo.Internal(err)).toBeInstanceOf(Error);
@@ -21,9 +21,9 @@ describe('Should construct', () => {
     });
 
     test('Request', (done) => {
-        expect(new boo.Request(__STRING__)).toBeInstanceOf(Error);
-        expect(new boo.Request(__NUMBER__)).toBeInstanceOf(Error);
-        expect(new boo.Request(__SYMBOL__)).toBeInstanceOf(Error);
+        expect(new boo.Request(STRING__)).toBeInstanceOf(Error);
+        expect(new boo.Request(NUMBER__)).toBeInstanceOf(Error);
+        expect(new boo.Request(SYMBOL__)).toBeInstanceOf(Error);
         expect(new boo.Request(null)).toBeInstanceOf(Error);
         expect(new boo.Request()).toBeInstanceOf(Error);
         expect(new boo.Request(err)).toBeInstanceOf(Error);
@@ -32,9 +32,9 @@ describe('Should construct', () => {
     });
 
     test('Timeout', (done) => {
-        expect(new boo.Timeout(__STRING__)).toBeInstanceOf(Error);
-        expect(new boo.Timeout(__NUMBER__)).toBeInstanceOf(Error);
-        expect(new boo.Timeout(__SYMBOL__)).toBeInstanceOf(Error);
+        expect(new boo.Timeout(STRING__)).toBeInstanceOf(Error);
+        expect(new boo.Timeout(NUMBER__)).toBeInstanceOf(Error);
+        expect(new boo.Timeout(SYMBOL__)).toBeInstanceOf(Error);
         expect(new boo.Timeout(null)).toBeInstanceOf(Error);
         expect(new boo.Timeout()).toBeInstanceOf(Error);
         expect(new boo.Timeout(err)).toBeInstanceOf(Error);
@@ -43,9 +43,9 @@ describe('Should construct', () => {
     });
 
     test('Validation', (done) => {
-        expect(new boo.Validation(__STRING__)).toBeInstanceOf(Error);
-        expect(new boo.Validation(__NUMBER__)).toBeInstanceOf(Error);
-        expect(new boo.Validation(__SYMBOL__)).toBeInstanceOf(Error);
+        expect(new boo.Validation(STRING__)).toBeInstanceOf(Error);
+        expect(new boo.Validation(NUMBER__)).toBeInstanceOf(Error);
+        expect(new boo.Validation(SYMBOL__)).toBeInstanceOf(Error);
         expect(new boo.Validation(null)).toBeInstanceOf(Error);
         expect(new boo.Validation()).toBeInstanceOf(Error);
         expect(new boo.Validation(err)).toBeInstanceOf(Error);
@@ -55,15 +55,15 @@ describe('Should construct', () => {
 });
 
 describe('Should have a message', () => {
-    const err = new TypeError(__STRING__);
+    const err = new TypeError(STRING__);
 
     test('Internal', (done) => {
-        expect(new boo.Internal(__STRING__).message).toBe(__STRING__);
-        expect(new boo.Internal(__NUMBER__).message).toBe(String(__NUMBER__));
+        expect(new boo.Internal(STRING__).message).toBe(STRING__);
+        expect(new boo.Internal(NUMBER__).message).toBe(String(NUMBER__));
         expect(new boo.Internal().message).toBeUndefined();
         expect(new boo.Internal(null).message).toBeUndefined();
-        expect(new boo.Internal(__OBJECT__).message).toBe(String(__OBJECT__));
-        expect(new boo.Internal(err).message).toBe(__STRING__);
+        expect(new boo.Internal(OBJECT__).message).toBe(String(OBJECT__));
+        expect(new boo.Internal(err).message).toBe(STRING__);
 
         done();
     });
@@ -71,10 +71,10 @@ describe('Should have a message', () => {
     test('Request', (done) => {
         expect(new boo.Request().message).toBeUndefined();
         expect(new boo.Request(null).message).toBeUndefined();
-        expect(new boo.Request(__STRING__).message).toBe(__STRING__);
-        expect(new boo.Request(__NUMBER__).message).toBe(String(__NUMBER__));
-        expect(new boo.Request(__OBJECT__).message).toBe(String(__OBJECT__));
-        expect(new boo.Request(err).message).toBe(__STRING__);
+        expect(new boo.Request(STRING__).message).toBe(STRING__);
+        expect(new boo.Request(NUMBER__).message).toBe(String(NUMBER__));
+        expect(new boo.Request(OBJECT__).message).toBe(String(OBJECT__));
+        expect(new boo.Request(err).message).toBe(STRING__);
 
         done();
     });
@@ -82,10 +82,10 @@ describe('Should have a message', () => {
     test('Timeout', (done) => {
         expect(new boo.Timeout().message).toBeUndefined();
         expect(new boo.Timeout(null).message).toBeUndefined();
-        expect(new boo.Timeout(__STRING__).message).toBe(__STRING__);
-        expect(new boo.Timeout(__NUMBER__).message).toBe(String(__NUMBER__));
-        expect(new boo.Timeout(__OBJECT__).message).toBe(String(__OBJECT__));
-        expect(new boo.Timeout(err).message).toBe(__STRING__);
+        expect(new boo.Timeout(STRING__).message).toBe(STRING__);
+        expect(new boo.Timeout(NUMBER__).message).toBe(String(NUMBER__));
+        expect(new boo.Timeout(OBJECT__).message).toBe(String(OBJECT__));
+        expect(new boo.Timeout(err).message).toBe(STRING__);
 
         done();
     });
@@ -93,10 +93,10 @@ describe('Should have a message', () => {
     test('Validation', (done) => {
         expect(new boo.Validation().message).toBeUndefined();
         expect(new boo.Validation(null).message).toBeUndefined();
-        expect(new boo.Validation(__STRING__).message).toBe(__STRING__);
-        expect(new boo.Validation(__NUMBER__).message).toBe(String(__NUMBER__));
-        expect(new boo.Validation(__OBJECT__).message).toBe(String(__OBJECT__));
-        expect(new boo.Validation(err).message).toBe(__STRING__);
+        expect(new boo.Validation(STRING__).message).toBe(STRING__);
+        expect(new boo.Validation(NUMBER__).message).toBe(String(NUMBER__));
+        expect(new boo.Validation(OBJECT__).message).toBe(String(OBJECT__));
+        expect(new boo.Validation(err).message).toBe(STRING__);
 
         done();
     });

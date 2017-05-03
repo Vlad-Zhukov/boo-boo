@@ -12,8 +12,8 @@
     "url": "https://github.com/Vlad-Zhukov/boo-boo/issues"
   },
   "main": "./dist/index.js",
-  "module": "./src/index.js",
-  "jsnext:main": "./src/index.js",
+  "module": "./es/index.js",
+  "jsnext:main": "./es/index.js",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
@@ -40,7 +40,8 @@
   },
   "files": [
     "src",
-    "dist"
+    "dist",
+    "es"
   ],
   "jest": {
     "roots": [
