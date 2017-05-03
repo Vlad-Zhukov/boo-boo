@@ -9,7 +9,7 @@ A [`Boo`](#boo) constructor, inherited from [`Error`](https://developer.mozilla.
 Each variant creates an instance of Boo with a specific `name` property. See [`names`](#names) for all available names. 
 
 __Arguments__
-- `[messageOrError]` _(any|Error)_: Optional. Human-readable description that will be coerced to a string. 
+- `[messageOrError]` _(any|Error)_: Optional. Error description that will be coerced to a string. 
 If the value is an instance of `Error`, its `message` property will be taken instead.
 
 __Examples__
