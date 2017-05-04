@@ -19,8 +19,7 @@ export default {
     targets: [
         {
             dest: pkg.main,
-            format: 'umd',
-            moduleName: 'boo-boo',
+            format: 'cjs',
             sourceMap: true,
         },
         {
