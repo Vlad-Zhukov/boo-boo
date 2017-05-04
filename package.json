@@ -1,6 +1,6 @@
 {
   "name": "boo-boo",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Opinionated better errors for Node.js, browsers and React Native.",
   "author": "Vlad Zhukov (http://github.com/Vlad-Zhukov)",
   "license": "MIT",
@@ -41,7 +41,7 @@
   "keywords": ["error", "errors", "throw", "fail", "failure", "boo-boo", "boo"],
   "files": [
     "src",
-    "dist",
+    "cjs",
     "es"
   ],
   "jest": {
