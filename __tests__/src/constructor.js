@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle */
+
 import boo from '../../src/index';
 
 const NUMBER__ = 12345;

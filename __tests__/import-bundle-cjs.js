@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle */
+
 const boo = require('../cjs/index');
 
 const STRING__ = 'boo!';

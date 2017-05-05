@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle */
+
 import boo from '../cjs/index';
 
 const STRING__ = 'boo!';
