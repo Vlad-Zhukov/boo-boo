@@ -1,4 +1,4 @@
-boo-boo · [![npm](https://badge.fury.io/js/boo-boo.svg)](https://www.npmjs.com/package/boo-boo)
+boo-boo · [![npm](https://img.shields.io/npm/v/boo-boo.svg)](https://www.npmjs.com/package/boo-boo)
 =======
 > Opinionated better errors for Node.js, browsers and React Native.
 
