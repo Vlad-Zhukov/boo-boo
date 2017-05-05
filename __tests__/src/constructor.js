@@ -3,7 +3,6 @@ import boo from '../../src/index';
 const NUMBER__ = 12345;
 const STRING__ = 'boo!';
 const OBJECT__ = {};
-const UNDEFINED__ = undefined;
 const SYMBOL__ = Symbol(STRING__);
 
 describe('Should construct', () => {
