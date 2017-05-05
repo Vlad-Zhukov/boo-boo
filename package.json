@@ -31,14 +31,22 @@
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-plugin-import": "^2.2.0",
     "jest": "^19.0.2",
-    "prettier-eslint-cli": "^3.4.2",
+    "prettier-eslint-cli": "^3.4.3",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1"
   },
   "engines": {
     "node": ">=6"
   },
-  "keywords": ["error", "errors", "throw", "fail", "failure", "boo-boo", "boo"],
+  "keywords": [
+    "error",
+    "errors",
+    "throw",
+    "fail",
+    "failure",
+    "boo-boo",
+    "boo"
+  ],
   "files": [
     "src",
     "cjs",
