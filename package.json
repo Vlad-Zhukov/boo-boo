@@ -1,13 +1,10 @@
 {
   "name": "boo-boo",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "Opinionated better errors for Node.js, browsers and React Native.",
   "author": "Vlad Zhukov (http://github.com/Vlad-Zhukov)",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Vlad-Zhukov/boo-boo"
-  },
+  "repository": "Vlad-Zhukov/boo-boo",
   "bugs": {
     "url": "https://github.com/Vlad-Zhukov/boo-boo/issues"
   },
@@ -35,7 +32,7 @@
     "rollup-plugin-babel": "^2.7.1"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">= 6"
   },
   "keywords": [
     "error",
