@@ -1,4 +1,4 @@
-import boo from '../../src/index';
+import boo from '../../src/boo-boo';
 
 describe('', () => {
     test('', (done) => {

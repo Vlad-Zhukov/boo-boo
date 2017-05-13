@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 
-import boo from '../../src/index';
+import boo from '../../src/boo-boo';
 
 const NUMBER__ = 12345;
 const STRING__ = 'boo!';
