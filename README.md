@@ -2,7 +2,37 @@ boo-boo · [![npm](https://img.shields.io/npm/v/boo-boo.svg)](https://www.npmjs.
 =======
 > Opinionated better errors for Node.js, browsers and React Native.
 
+## Install
+```bash
+$ yarn add boo-boo
+```
+or
+```bash
+$ npm install --save boo-boo 
+```
+
+## Usage
+```js
+import boo from 'boo-boo';
+// or
+const boo = require('boo-boo');
+
+// ...
+
+try {
+    JSON.parse(someJsonString);
+}
+catch (err) {
+    throw new boo.Validation(err);
+}
+```
+
 ## API
+- [`Boo` constructors](#new-boointernalmessageorerrornew-boorequestmessageorerrornew-bootimeoutmessageorerrornew-boovalidationmessageorerror)
+- [`Boo`](#boo)
+- [`names`](#names)
+
+---
 
 ### `new boo.Internal([messageOrError])`<br>`new boo.Request([messageOrError])`<br>`new boo.Timeout([messageOrError])`<br>`new boo.Validation([messageOrError])`
 A [`Boo`](#boo) constructor, inherited from [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). 
