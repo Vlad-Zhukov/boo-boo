@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 
-import boo from '../cjs/index';
+import boo from '../dist/boo-boo.cjs';
 
 const STRING__ = 'boo!';
 

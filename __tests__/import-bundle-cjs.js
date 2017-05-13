@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 
-const boo = require('../cjs/index');
+const boo = require('../dist/boo-boo.cjs');
 
 const STRING__ = 'boo!';
 

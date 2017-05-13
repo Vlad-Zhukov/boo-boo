@@ -8,9 +8,9 @@
   "bugs": {
     "url": "https://github.com/Vlad-Zhukov/boo-boo/issues"
   },
-  "main": "./cjs/index.js",
-  "module": "./es/index.js",
-  "jsnext:main": "./es/index.js",
+  "main": "./dist/boo-boo.cjs.js",
+  "module": "./dist/boo-boo.es.js",
+  "jsnext:main": "./dist/boo-boo.es.js",
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
@@ -44,8 +44,7 @@
   ],
   "files": [
     "src",
-    "cjs",
-    "es"
+    "dist"
   ],
   "jest": {
     "roots": [
