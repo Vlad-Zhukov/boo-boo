@@ -2,6 +2,19 @@ boo-boo · [![npm](https://img.shields.io/npm/v/boo-boo.svg)](https://www.npmjs.
 =======
 > Opinionated better errors for Node.js, browsers and React Native.
 
+Working on a project I sooner or later come to a point where I would like to have my own errors, that can be easily 
+distinguished from all other errors as well as from each other. Another quite important need is to send error messages
+and stack traces as JSON responses, but since native errors are missing `toJSON()` method they can't be properly 
+stringified.
+
+## Table of Contents
+- [Install](#install)
+- [Usage](#usage)
+- [API](#api)
+  - [`Boo` constructors](#new-boointernalmessageorerrornew-boorequestmessageorerrornew-bootimeoutmessageorerrornew-boovalidationmessageorerror)
+  - [`Boo`](#boo)
+  - [`names`](#names)
+
 ## Install
 ```bash
 $ yarn add boo-boo
@@ -28,11 +41,6 @@ catch (err) {
 ```
 
 ## API
-- [`Boo` constructors](#new-boointernalmessageorerrornew-boorequestmessageorerrornew-bootimeoutmessageorerrornew-boovalidationmessageorerror)
-- [`Boo`](#boo)
-- [`names`](#names)
-
----
 
 ### `new boo.Internal([messageOrError])`<br>`new boo.Request([messageOrError])`<br>`new boo.Timeout([messageOrError])`<br>`new boo.Validation([messageOrError])`
 A [`Boo`](#boo) constructor, inherited from [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). 
