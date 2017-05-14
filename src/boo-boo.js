@@ -61,6 +61,8 @@ function createBoo(name) {
 }
 
 const names = {
+    Database: 'Boo/Database',
+    External: 'Boo/External',
     Internal: 'Boo/Internal',
     Request: 'Boo/Request',
     Timeout: 'Boo/Timeout',
@@ -68,6 +70,8 @@ const names = {
 };
 
 const boo = {
+    Database: createBoo(names.Database),
+    External: createBoo(names.External),
     Internal: createBoo(names.Internal),
     Request: createBoo(names.Request),
     Timeout: createBoo(names.Timeout),

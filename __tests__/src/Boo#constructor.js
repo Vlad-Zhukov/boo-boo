@@ -9,6 +9,24 @@ const SYMBOL__ = Symbol(STRING__);
 describe('Boo#constructor()', () => {
     const err = new TypeError(STRING__);
 
+    test('boo.Database', () => {
+        expect(new boo.Database(STRING__)).toBeInstanceOf(Error);
+        expect(new boo.Database(NUMBER__)).toBeInstanceOf(Error);
+        expect(new boo.Database(SYMBOL__)).toBeInstanceOf(Error);
+        expect(new boo.Database(null)).toBeInstanceOf(Error);
+        expect(new boo.Database()).toBeInstanceOf(Error);
+        expect(new boo.Database(err)).toBeInstanceOf(Error);
+    });
+
+    test('boo.External', () => {
+        expect(new boo.External(STRING__)).toBeInstanceOf(Error);
+        expect(new boo.External(NUMBER__)).toBeInstanceOf(Error);
+        expect(new boo.External(SYMBOL__)).toBeInstanceOf(Error);
+        expect(new boo.External(null)).toBeInstanceOf(Error);
+        expect(new boo.External()).toBeInstanceOf(Error);
+        expect(new boo.External(err)).toBeInstanceOf(Error);
+    });
+
     test('boo.Internal', () => {
         expect(new boo.Internal(STRING__)).toBeInstanceOf(Error);
         expect(new boo.Internal(NUMBER__)).toBeInstanceOf(Error);

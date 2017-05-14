@@ -9,6 +9,24 @@ const OBJECT__ = {};
 describe('Boo#message', () => {
     const err = new TypeError(STRING__);
 
+    test('boo.Database', () => {
+        expect(new boo.Database(STRING__).message).toBe(STRING__);
+        expect(new boo.Database(NUMBER__).message).toBe(String(NUMBER__));
+        expect(new boo.Database().message).toBeUndefined();
+        expect(new boo.Database(null).message).toBeUndefined();
+        expect(new boo.Database(OBJECT__).message).toBe(String(OBJECT__));
+        expect(new boo.Database(err).message).toBe(STRING__);
+    });
+
+    test('boo.External', () => {
+        expect(new boo.External(STRING__).message).toBe(STRING__);
+        expect(new boo.External(NUMBER__).message).toBe(String(NUMBER__));
+        expect(new boo.External().message).toBeUndefined();
+        expect(new boo.External(null).message).toBeUndefined();
+        expect(new boo.External(OBJECT__).message).toBe(String(OBJECT__));
+        expect(new boo.External(err).message).toBe(STRING__);
+    });
+
     test('boo.Internal', () => {
         expect(new boo.Internal(STRING__).message).toBe(STRING__);
         expect(new boo.Internal(NUMBER__).message).toBe(String(NUMBER__));

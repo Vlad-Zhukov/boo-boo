@@ -11,7 +11,7 @@ stringified.
 - [Install](#install)
 - [Usage](#usage)
 - [API](#api)
-  - [`Boo` constructors](#new-boointernalmessageorerrornew-boorequestmessageorerrornew-bootimeoutmessageorerrornew-boovalidationmessageorerror)
+  - [`Boo` constructors](#new-boonamemessageorerrornew)
   - [`Boo`](#boo)
   - [`names`](#names)
 
@@ -42,13 +42,14 @@ catch (err) {
 
 ## API
 
-### `new boo.Internal([messageOrError])`<br>`new boo.Request([messageOrError])`<br>`new boo.Timeout([messageOrError])`<br>`new boo.Validation([messageOrError])`
+### `new boo.[name]([messageOrError])`
 A [`Boo`](#boo) constructor, inherited from [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). 
-Each variant creates an instance of Boo with a specific `name` property. See [`names`](#names) for all available names. 
+Each variant creates an instance of Boo with a specific `name` property. For a list of all available names see 
+[`names`](#names). 
 
 __Arguments__
-- `[messageOrError]` _(any|Error)_: Optional. Error description that will be coerced to a string. 
-If the value is an instance of `Error`, its `message` property will be taken instead.
+- `[messageOrError]` _(any|Error)_: Optional. Error description that will be coerced to a string. If the value is 
+an instance of `Error`, its `message` property will be taken instead.
 
 __Examples__
 ```js
@@ -62,8 +63,7 @@ console.log(err.message); // 'boo!'
 ---
 
 ### `Boo`
-An instance of `Boo` created by [one of constructors](#new-boointernalmessageorerrornew-boorequestmessageorerrornew-bootimeoutmessageorerrornew-boovalidationmessageorerror)
-above.
+An instance of `Boo` created by [one of constructors](#new-boonamemessageorerrornew) above.
 
 __Properties__
 - `name` _(String)_: Error name that is set upon creation. See [`names`](#names) for all available names. 
@@ -74,7 +74,7 @@ __Properties__
 more slick `err.isBoo`.
 
 __Methods__
-- `toString()` → _String_: Overrides the default [`Error.prototype.toString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString) 
+- `toString()` → _String_: Overrides the default [`Error#toString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString) 
 method in order to provide additional data.
 - `toJSON()` → _Object_: A plain object representation that is required for [`JSON.stringify()`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify). 
 The resulting object contains `name`, `message` and `stack` properties (if exist).
@@ -82,7 +82,14 @@ The resulting object contains `name`, `message` and `stack` properties (if exist
 ---
 
 ### `names`
-A plain object of names used by [`Boo`](#boo) constructors: `Internal`, `Request`, `Timeout` and `Validation`. 
+A plain object of names used by [`Boo`](#boo) constructors: 
+- `Database`
+- `External`
+- `Internal`
+- `Request`
+- `Timeout` 
+- `Validation`
+
 This list can be supplemented, PRs are welcome.
 
 __Examples__
