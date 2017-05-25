@@ -9,8 +9,8 @@
     "url": "https://github.com/Vlad-Zhukov/boo-boo/issues"
   },
   "main": "./dist/boo-boo.cjs.js",
-  "module": "./dist/boo-boo.es.js",
-  "jsnext:main": "./dist/boo-boo.es.js",
+  "module": "./dist/boo-boo.esm.js",
+  "jsnext:main": "./dist/boo-boo.esm.js",
   "scripts": {
     "build": "rimraf dist/ && rollup -c",
     "test": "jest",
