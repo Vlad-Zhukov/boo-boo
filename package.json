@@ -12,10 +12,10 @@
   "module": "./dist/boo-boo.es.js",
   "jsnext:main": "./dist/boo-boo.es.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rimraf dist/ && rollup -c",
     "test": "jest",
-    "lint": "eslint **/*.js",
-    "prettier": "prettier-eslint --write **/*.js",
+    "lint": "eslint '**/*.js'",
+    "prettier": "prettier-eslint --write '**/*.js'",
     "prepublish": "yarn run build"
   },
   "dependencies": {},
@@ -28,6 +28,7 @@
     "eslint-plugin-import": "^2.3.0",
     "jest": "^20.0.4",
     "prettier-eslint-cli": "^4.0.1",
+    "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1"
   },
