@@ -6,9 +6,7 @@ const pkg = require('./package.json');
 export default {
     entry: './src/boo-boo.js',
 
-    plugins: [
-        babel(),
-    ],
+    plugins: [babel()],
 
     targets: [
         {
