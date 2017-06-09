@@ -1,6 +1,6 @@
 {
   "name": "boo-boo",
-  "version": "1.0.0-alpha.9",
+  "version": "1.0.0-alpha.10",
   "description": "Opinionated better errors for Node.js, browsers and React Native.",
   "author": "Vlad Zhukov (http://github.com/Vlad-Zhukov)",
   "license": "MIT",
