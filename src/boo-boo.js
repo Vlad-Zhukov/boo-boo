@@ -31,16 +31,17 @@ function createBoo(name) {
             if (__DEV__ && typeof Error.captureStackTrace === 'function') {
                 Error.captureStackTrace(this, Boo);
             }
-        }
 
-        // eslint-disable-next-line class-methods-use-this
-        get isBoo() {
-            return true;
+            Object.defineProperty(this, 'isBoo', {
+                enumerable: false,
+                configurable: false,
+                writable: false,
+                value: true,
+            });
         }
 
         toString() {
-            const obj = Object(this);
-            if (obj !== this) throw new TypeError();
+            if (Object(this) !== this) throw new TypeError();
 
             let result = this.name;
             if (this.message) result += `: ${this.message}`;
@@ -49,8 +50,7 @@ function createBoo(name) {
         }
 
         toJSON() {
-            const obj = Object(this);
-            if (obj !== this) throw new TypeError();
+            if (Object(this) !== this) throw new TypeError();
 
             const result = {
                 name: this.name,
