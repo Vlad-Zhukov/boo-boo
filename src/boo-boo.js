@@ -1,3 +1,5 @@
+const __DEV__ = process != null && process.env != null && process.env.NODE_ENV !== 'production';
+
 /**
  * @param name {String}
  * @returns {Boo}
@@ -26,7 +28,7 @@ function createBoo(name) {
             this.message = message;
             this.name = name;
 
-            if (typeof Error.captureStackTrace === 'function') {
+            if (__DEV__ && typeof Error.captureStackTrace === 'function') {
                 Error.captureStackTrace(this, Boo);
             }
         }

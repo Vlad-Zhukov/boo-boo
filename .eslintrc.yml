@@ -3,7 +3,8 @@ parser: babel-eslint
 extends: airbnb-base
 
 env:
-    shared-node-browser: true
+    browser: true
+    node: true
     jest: true
 
 rules:
@@ -11,7 +12,7 @@ rules:
     indent: [error, 4, {SwitchCase: 1}]
     max-len: [error, 120]
     comma-dangle: [error, always-multiline]
-    no-underscore-dangle: [error, {allowAfterThis: true, allowAfterSuper: true}]
+    no-underscore-dangle: [error, {allowAfterThis: true, allowAfterSuper: true, allow: [__DEV__]}]
     no-plusplus: [error, {allowForLoopAfterthoughts: true}]
     no-use-before-define: [error, {variables: false}]
     object-curly-spacing: [error, never]
